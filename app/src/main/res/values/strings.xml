@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Area Calculator</string>
+    <string name="triangulo">Triangle</string>
+    <string name="quadrado">Square</string>
+    <string name="circulo">Circle</string>
+    <string name="selecioneForma">Select a form:</string>
+    <string name="dadosCirculo">Enter circle data:</string>
+    <string name="raio">Radius:</string>
+    <string name="dadoTriangulo">Enter triangle data:</string>
+    <string name="base">Base:</string>
+    <string name="altura">Height:</string>
+    <string name="area">Area:</string>
+    <string name="dadosQuadrado">Enter the square data:</string>
+    <string name="começarNovamente">Start again</string>
+    <string name="avançar">Next</string>
+</resources>
