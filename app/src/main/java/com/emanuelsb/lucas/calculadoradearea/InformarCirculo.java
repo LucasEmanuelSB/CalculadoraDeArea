@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class InformarCirculo extends AppCompatActivity {
 
@@ -25,11 +26,18 @@ public class InformarCirculo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent areaCirculo = new Intent(getApplicationContext(), AreaCirculo.class);
+                if(EDRadio.getText().toString().length() > 0){
 
-                areaCirculo.putExtra("raio",Double.parseDouble(EDRadio.getText().toString()));
+                    Intent areaCirculo = new Intent(getApplicationContext(), AreaCirculo.class);
 
-                startActivity(areaCirculo);
+                    areaCirculo.putExtra("raio",Double.parseDouble(EDRadio.getText().toString()));
+
+                    startActivity(areaCirculo);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Por favor, insira o raio para o calculo", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

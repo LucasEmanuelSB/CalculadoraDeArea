@@ -6,4 +6,60 @@
     android:layout_height="match_parent"
     tools:context="com.emanuelsb.lucas.calculadoradearea.AreaQuadrado">
 
+    <ImageView
+        android:tint="@color/colorAccent"
+        android:id="@+id/triangulo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/quadrado"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.14999998" />
+
+    <TextView
+        android:id="@+id/area"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/area"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/triangulo"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/voltar"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/triangulo" />
+
+    <TextView
+        android:id="@+id/valorArea"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/area"
+        app:layout_constraintTop_toTopOf="@+id/area"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/voltar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/começarNovamente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/triangulo"
+        app:layout_constraintVertical_bias="0.96" />
+
 </android.support.constraint.ConstraintLayout>

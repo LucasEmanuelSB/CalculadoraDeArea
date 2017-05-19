@@ -15,15 +15,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39999998"
-        app:layout_constraintHorizontal_bias="0.15" />
+        app:layout_constraintVertical_bias="0.029999971"
+        app:layout_constraintHorizontal_bias="0.06"
+        android:layout_marginLeft="0dp" />
 
     <RadioGroup
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:weightSum="1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/TVselecaoFigura"
@@ -54,9 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/avançar"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="-22dp" />
+        android:layout_marginBottom="8dp" />
 
 </android.support.constraint.ConstraintLayout>

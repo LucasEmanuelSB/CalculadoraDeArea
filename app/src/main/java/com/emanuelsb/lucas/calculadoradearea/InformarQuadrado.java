@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class InformarQuadrado extends AppCompatActivity {
 
@@ -20,20 +21,28 @@ public class InformarQuadrado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informar_quadrado);
 
-        EDBase = (EditText)findViewById(R.id.EDbase);
-        EDAltura = (EditText)findViewById(R.id.EDaltura);
+        EDBase = (EditText)findViewById(R.id.EDBase);
+        EDAltura = (EditText)findViewById(R.id.EDAltura);
         avancar = (Button)findViewById(R.id.avancar);
 
         avancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent areaCirculo = new Intent(getApplicationContext(), AreaCirculo.class);
+                if(EDBase.getText().toString().length() == 0){
+                    Toast.makeText(getApplicationContext(), "Por favor, insira a base para o calculo", Toast.LENGTH_SHORT).show();
+                } else if(EDAltura.getText().toString().length() == 0){
+                    Toast.makeText(getApplicationContext(), "Por favor, insira a altura para o calculo", Toast.LENGTH_SHORT).show();
+                } else{
 
-                areaCirculo.putExtra("base",Double.parseDouble(EDBase.getText().toString()));
-                areaCirculo.putExtra("altura",Double.parseDouble(EDAltura.getText().toString()));
+                    Intent areaQuadrado = new Intent(getApplicationContext(), AreaQuadrado.class);
 
-                startActivity(areaCirculo);
+                    areaQuadrado.putExtra("base",Double.parseDouble(EDBase.getText().toString()));
+                    areaQuadrado.putExtra("altura",Double.parseDouble(EDAltura.getText().toString()));
+
+                    startActivity(areaQuadrado);
+                }
+
             }
         });
     }
